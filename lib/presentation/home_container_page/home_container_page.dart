@@ -1,4 +1,5 @@
 import 'package:get/get_navigation/src/routes/default_transitions.dart';
+import 'package:mylaundryapp/widgets/app_logo.dart';
 
 import '../home_container_page/widgets/deliverymanun_item_widget.dart';
 import '../home_container_page/widgets/homecontainer_item_widget.dart';
@@ -24,8 +25,6 @@ class HomeContainerPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     mediaQueryData = MediaQuery.of(context);
-    double bubbleSize1 = 50.0; // First bubble size
-    double bubbleSize2 = 25.0; // Second bubble size
 
     return SafeArea(
       child: Scaffold(
@@ -76,6 +75,20 @@ class HomeContainerPage extends StatelessWidget {
                     _buildNinetyOne(),
                     SizedBox(height: 5.v),
                   ],
+                ),
+              ),
+            ),
+            Positioned(
+              left: 0.0,
+              top: 0.0,
+              child: Opacity(
+                opacity: 1.0,
+                child: AppLogo(
+                  size: 100.0,
+                  animationType: AnimationType.rotate,
+                  logoUrl: ImageConstant.imgLogo21290x290,
+                  shake: true,
+                  repeat: false,
                 ),
               ),
             ),
